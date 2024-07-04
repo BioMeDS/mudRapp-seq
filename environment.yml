@@ -1,0 +1,7 @@
+name: mudRapp-seq
+dependencies:
+   - python=3.9.16
+   - napari=0.4.17
+   - pip
+   - pip:
+     - "--editable=git+https://github.com/BioMeDS/starfish.git@947472f79ca5206bc9075c7bb45bb28425b3f105#egg=starfish"
