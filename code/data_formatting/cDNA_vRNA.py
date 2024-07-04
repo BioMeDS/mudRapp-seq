@@ -18,7 +18,7 @@ for dir in [
     for i in tqdm([str(x)+" PLP" for x in [1, 5, 10, "NegCtrl 10"]]):
         plp = i.split(" ")[0] + "PLP"
         _, molecule, rep = dir.split("/")
-        outputdir = f"data/starfish/cDNA_vRNA/{rep.replace('r','rep')}/{molecule}/{plp}"
+        outputdir = f"data/spacetx/cDNA_vRNA/{rep.replace('r','rep')}/{molecule}/{plp}"
         os.makedirs(outputdir, exist_ok=True)
         fulldir = f"data/raw/{dir}/{i}"
 
