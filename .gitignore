@@ -1,6 +1,9 @@
 # Starfish repo (downloaded by mamba)
 src/starfish
 
+# Large analysis results
+analysis/segmentation
+
 # Raw data
 data/
 
