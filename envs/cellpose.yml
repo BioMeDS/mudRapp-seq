@@ -1,0 +1,4 @@
+name: mudRapp-seq-cellpose
+dependencies:
+   - python=3.9.16
+   - cellpose=2.2.3
