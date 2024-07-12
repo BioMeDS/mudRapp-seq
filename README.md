@@ -1,7 +1,7 @@
 # mudRapp-seq
 
 This repository contains the code that accompanies the paper introducing 
-"*In-situ sequencing with multiple direct RNA-assisted padlock probing (mudRapp-seq)*":
+"*Multiple direct RNA-assisted padlock probing in combination with in-situ sequencing (mudRapp-seq)*":
 
 > Ahmad S, Schaust J, Ambil UB, Fischer SC, Ankenbrand MJ, Smyth RP. *Localization of influenza viral RNA in cells by direct RNA padlock probing and in-situ sequencing.* (in preparation)
 
@@ -61,3 +61,10 @@ This code performs nuclei segmentation with the cellpose model and watershed for
 mamba run -n mudRapp-seq-cellpose python code/segmentation/cellpose_nuclei_watershed_cells.py
 ```
 
+### Spot detection
+
+Spot detection is performed using starfish methods. The following command creates csv and netCDF files in `analysis/spot_detection`
+
+```bash
+mamba run -n mudRapp-seq-starfish python code/spot_detection/spot_detection.py
+```
