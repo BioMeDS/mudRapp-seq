@@ -11,6 +11,10 @@ spots <- spots %>%
         ) %>%
         separate(file, c("rep", "molecule", "sample", "fov"), sep = "/")
 
+spots <- spots %>%
+        group_by(rep, molecule, sample, fov) %>%
+        mutate(n_cells = n_distinct(cell))
+
 outfile <- "analysis/spot_detection/cDNA_vRNA/all_spots.tsv.xz"
 write_tsv(spots, outfile)
 print(str_c("Successfully written ", nrow(spots), " spots to ", outfile))

@@ -10,6 +10,8 @@ This repository contains the code that accompanies the paper introducing
 Raw data is archived independently in the [BioImage Archive (BIA)](https://www.ebi.ac.uk/bioimage-archive/) with accession number **TODO**.
 In order to reproduce our analyses, download the raw data from BIA and put them into the `data/raw` folder.
 
+All final and some intermediate results are included in the repository to facilitate additional analyses without having to re-process all files from scratch.
+
 ## Computational environments
 
 ### Python environments
@@ -74,3 +76,12 @@ Spot detection is performed using starfish methods. The following command create
 ```bash
 mamba run -n mudRapp-seq-starfish python code/spot_detection/spot_detection.py
 ```
+
+This creates separate spots files for each fov, they can be combined to a single `tsv.xz` file for each experiment using
+
+```bash
+Rscript code/spot_detection/combine_csvs.R
+```
+
+The result of this step is included in the repository:
+- `analysis/spot_detection/cDNA_vRNA/all_spots.tsv.xz`
