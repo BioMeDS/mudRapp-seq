@@ -10,9 +10,9 @@ This repository contains the code that accompanies the paper introducing
 Raw data is archived independently in the [BioImage Archive (BIA)](https://www.ebi.ac.uk/bioimage-archive/) with accession number **TODO**.
 In order to reproduce our analyses, download the raw data from BIA and put them into the `data/raw` folder.
 
-## Analyses
+## Computational environments
 
-### Python environment
+### Python environments
 
 To re-create the python environments with [`mamba`](https://github.com/mamba-org/mamba) run:
 
@@ -20,6 +20,12 @@ To re-create the python environments with [`mamba`](https://github.com/mamba-org
 mamba env create -f envs/starfish.yml # mudRapp-seq-starfish
 mamba env create -f envs/cellpose.yml # mudRapp-seq-cellpose
 ```
+
+### R environment
+
+The R environment for this project is managed via [`renv`](https://rstudio.github.io/renv/articles/renv.html). A local environment is automatically created for you, when you run `R` or `Rscript` for the first time in the main project directory. This happens because of the `.Rprofile` file.
+
+## Analyses
 
 ### Data formatting
 
