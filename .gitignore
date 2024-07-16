@@ -1,6 +1,3 @@
-# renv folder
-envs/renv
-
 # Starfish repo (downloaded by mamba)
 src/starfish
 
