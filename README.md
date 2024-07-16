@@ -92,3 +92,14 @@ Rscript code/spot_detection/combine_csvs.R
 
 The result of this step is included in the repository:
 - `analysis/spot_detection/cDNA_vRNA/all_spots.tsv.xz`
+
+### Spot analysis
+
+#### Sensitivity of cDNA vs direct vRNA probing
+
+The main result is the much higher sensitivity for direct vRNA probing compared to cDNA probing.
+For details, see the [analysis notebook](code/spot_analysis/cDNA_vRNA.ipynb).
+These figures are included in the manuscript as Supp. Fig. 1b and Fig. 1c, respectively.
+
+![Supplementary Figure 1b](figures/supp-fig1b-cDNA_vRNA-spot_counts-neg_ctrl.svg)
+![Figure 1c](figures/fig1c-cDNA_vRNA-spot_counts.svg)
