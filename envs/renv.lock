@@ -20,6 +20,37 @@
       ],
       "Hash": "065ae649b05f1ff66bb0c793107508f5"
     },
+    "IRdisplay": {
+      "Package": "IRdisplay",
+      "Version": "1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "methods",
+        "repr"
+      ],
+      "Hash": "5ea7862cfcd8b146f233ed1ac9fb8eda"
+    },
+    "IRkernel": {
+      "Package": "IRkernel",
+      "Version": "1.3.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "IRdisplay",
+        "R",
+        "crayon",
+        "digest",
+        "evaluate",
+        "jsonlite",
+        "methods",
+        "pbdZMQ",
+        "repr",
+        "uuid"
+      ],
+      "Hash": "e57f593112825c91949debb0da1d45d6"
+    },
     "MASS": {
       "Package": "MASS",
       "Version": "7.3-61",
@@ -889,6 +920,16 @@
       ],
       "Hash": "2bcca3848e4734eb3b16103bc9aa4b8e"
     },
+    "pbdZMQ": {
+      "Package": "pbdZMQ",
+      "Version": "0.3-11",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "96432d2e7560d5242824427ecdf0fa98"
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.9.0",
@@ -1064,6 +1105,22 @@
         "utils"
       ],
       "Hash": "397b7b2a265bc5a7a06852524dabae20"
+    },
+    "repr": {
+      "Package": "repr",
+      "Version": "1.1.7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "base64enc",
+        "grDevices",
+        "htmltools",
+        "jsonlite",
+        "pillar",
+        "utils"
+      ],
+      "Hash": "1393acc49816f4fe143d87fb33e75631"
     },
     "reprex": {
       "Package": "reprex",

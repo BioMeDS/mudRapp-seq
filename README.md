@@ -27,6 +27,13 @@ mamba env create -f envs/cellpose.yml # mudRapp-seq-cellpose
 
 The R environment for this project is managed via [`renv`](https://rstudio.github.io/renv/articles/renv.html). A local environment is automatically created for you, when you run `R` or `Rscript` for the first time in the main project directory. This happens because of the `.Rprofile` file.
 
+### jupyter setting (vscode)
+
+The jupyter files are in sub-folders of `code/` but assume the kernel to run in the project root.
+This is necessary to make the R kernel use the local renv, and allows to consistently use paths relative to the project root rather than the specific notebook location.
+In VS Code this can be achieved by changing the setting `jupyter.notebookFileRoot` to `${workspaceFolder}`.
+For `jupyter lab` there seems to be no simple solution at this moment (see [jupyterlab#11619](https://github.com/jupyterlab/jupyterlab/issues/11619)).
+
 ## Analyses
 
 ### Data formatting
