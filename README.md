@@ -63,8 +63,8 @@ The first strategy was used for most data, as it was deemed sufficient for filte
 However, for single cell analyses the cell borders were not reliable enough.
 
 The separate cellpose model was trained on raw images without ICC (computational clearing by the microscope vendor).
-Further, data was preprocessed with intensity scaling and combination of dapi and X channel in a single rgb image (see code in file X) **TODO @Joél**.
-In order to maximize the number of correctly detected cells, the following parameters were used: `cell_proba=X`, `flow_threshold=X` and the resulting masks were post-processed, removing small objects and closing small holes and gaps (see code in file X) **TODO @Joél**.
+Further, data was preprocessed with intensity scaling and combination of dapi and X channel in a single rgb image (see code in file X) **TODO @Joél - done**.
+In order to maximize the number of correctly detected cells, the following parameters were used: `cell_proba=X`, `flow_threshold=X` and the resulting masks were post-processed, removing small objects and closing small holes and gaps (see code in file X) **TODO @Joél -done**.
 Masks produced this way were manually corrected using label editing tools in `napari`.
 Manual correction involved extending cells, shrinking cells, moving cell borders and adding new cells (starting with cell IDs of X) **TODO @Joél**.
 
