@@ -15,6 +15,10 @@ In order to reproduce our analyses, download the raw data from BIA and put them 
 
 All final and some intermediate results are included in the repository to facilitate additional analyses without having to re-process all files from scratch.
 
+### Data sets
+- **cDNA_vRNA**: sensitivity of cDNA vs direct vRNA probing ([raw (cDNA, vRNA)](data/raw/2023.11.16_PR8_1MOI_6hpi_cDNA_vRNA_PB1), [raw (cDNA*)](data/raw/2023.11.10_PR8_1MOI_6hpi_cDNA_PB1), [spacetx](data/spacetx/cDNA_vRNA))
+- **specificity**: specificity of PLPs with closely related strains PR8 and StPt ([raw](data/raw/2023.11.10_PR8_StPt_1MOI_6hpi_HA_Specificity_experiment))
+
 ## Computational environments
 
 ### Python environments
