@@ -102,8 +102,8 @@ class PrimaryTileFetcher(TileFetcher):
     def get_tile(
             self, fov_id: int, round_label: int, ch_label: int, zplane_label: int) -> FetchedTile:
         filename = self.fovs[fov_id]
-        match = re.search(r"/(r\d)/.*Region (\d+).*_s(\d+)_ch...tif", filename)
-        tile = match.group(3)
+        match = re.search(r"/.*Region (\d+).*_s(\d+)_ch...tif", filename)
+        tile = match.group(2)
         tile_id = int(tile)
         filename = self.fovs[fov_id]
         metadata = metadata_from_xml(metadata_filename(filename))
@@ -121,8 +121,8 @@ class AuxTileFetcher(TileFetcher):
     def get_tile(
             self, fov_id: int, round_label: int, ch_label: int, zplane_label: int) -> FetchedTile:
         filename = self.fovs[fov_id].replace("1Inc",f"{round_label+1}Inc")
-        match = re.search(r"/(r\d)/.*Region (\d+).*_s(\d+)_ch...tif", filename)
-        tile = match.group(3)
+        match = re.search(r"/.*Region (\d+).*_s(\d+)_ch...tif", filename)
+        tile = match.group(2)
         tile_id = int(tile)
         filename = self.fovs[fov_id]
         metadata = metadata_from_xml(metadata_filename(filename))

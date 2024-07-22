@@ -1,0 +1,41 @@
+{
+    "version": "0.0.0",
+    "channel_order": "AGTC",
+    "mappings": [
+        {
+            "codeword": [
+                {
+                    "r": 0,
+                    "c": 2,
+                    "v": 1.0
+                }
+            ],
+            "target": "PR8"
+        },
+        {
+            "codeword": [
+                {
+                    "r": 0,
+                    "c": 3,
+                    "v": 1.0
+                }
+            ],
+            "target": "StPt"
+        },
+        {
+            "codeword": [
+                {
+                    "r": 0,
+                    "c": 2,
+                    "v": 1.0
+                },
+                {
+                    "r": 0,
+                    "c": 3,
+                    "v": 1.0
+                }
+            ],
+            "target": "PR8_StPt"
+        }
+    ]
+}

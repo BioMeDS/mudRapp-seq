@@ -51,6 +51,7 @@ In order to create the formatted data in `data/spacetx` run these steps in the r
 
 ```bash
 mamba run -n mudRapp-seq-starfish python code/data_formatting/cDNA_vRNA.py
+mamba run -n mudRapp-seq-starfish python code/data_formatting/specificity.py
 ```
 
 ### Segmentation
