@@ -95,9 +95,10 @@ class ISSITile(FetchedTile):
 
 class PrimaryTileFetcher(TileFetcher):
 
-    def __init__(self, input_dir: str) -> None:
+    def __init__(self, input_dir: str, channel_offset: int = 2) -> None:
         self.input_dir = os.path.join(input_dir)
         self.fovs = sorted(glob(os.path.join(self.input_dir, f"*_ICC_Processed001_s*_ch02.tif")))
+        self.channel_offset = channel_offset
     
     def get_tile(
             self, fov_id: int, round_label: int, ch_label: int, zplane_label: int) -> FetchedTile:
@@ -106,6 +107,7 @@ class PrimaryTileFetcher(TileFetcher):
         tile = match.group(2)
         tile_id = int(tile)
         filename = self.fovs[fov_id]
+        filename = filename.replace("_ch02", f"_ch0{ch_label+self.channel_offset}")
         metadata = metadata_from_xml(metadata_filename(filename))
         extras = {"original_path": filename}
         return ISSITile(filename, tile_id, metadata, extras)
@@ -135,6 +137,12 @@ class AuxTileFetcher(TileFetcher):
 primary_image_dimensions: Mapping[Union[str, Axes], int] = {
     Axes.ROUND: 1,
     Axes.CH: 1,
+    Axes.ZPLANE: 1,
+}
+
+primary_image_dimensions_4channel: Mapping[Union[str, Axes], int] = {
+    Axes.ROUND: 1,
+    Axes.CH: 4,
     Axes.ZPLANE: 1,
 }
 
