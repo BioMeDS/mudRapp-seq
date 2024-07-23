@@ -14,7 +14,7 @@ for dir in tqdm([
     "2023.11.10_PR8_StPt_1MOI_6hpi_HA_Specificity_experiment/StPt",
     ]):
     _, strain = dir.split("/")
-    outputdir = f"data/spacetx/specificity/{strain}"
+    outputdir = f"data/spacetx/specificity/rep0/{strain}"
     os.makedirs(outputdir, exist_ok=True)
     fulldir = f"data/raw/{dir}"
 

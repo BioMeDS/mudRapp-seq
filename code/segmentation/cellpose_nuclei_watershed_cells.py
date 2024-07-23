@@ -8,8 +8,8 @@ import numpy as np
 
 model = models.CellposeModel(gpu=False, pretrained_model="models/cellpose/nuclei")
 files = []
-files += glob("data/spacetx/cDNA_vRNA/rep*/*/*/nuclei-fov*.tiff")
-files += glob("data/spacetx/specificity/*/nuclei-fov*.tiff")
+#files += glob("data/spacetx/cDNA_vRNA/rep*/*/*/nuclei-fov*.tiff")
+#files += glob("data/spacetx/specificity/rep0/*/nuclei-fov*.tiff")
 
 for file in tqdm(files):
 	img = io.imread(file)
