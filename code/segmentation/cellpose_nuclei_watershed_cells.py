@@ -7,7 +7,9 @@ from tqdm import tqdm
 import numpy as np
 
 model = models.CellposeModel(gpu=False, pretrained_model="models/cellpose/nuclei")
-files = glob("data/spacetx/cDNA_vRNA/rep*/*/*/nuclei-fov*.tiff")
+files = []
+files += glob("data/spacetx/cDNA_vRNA/rep*/*/*/nuclei-fov*.tiff")
+files += glob("data/spacetx/specificity/*/nuclei-fov*.tiff")
 
 for file in tqdm(files):
 	img = io.imread(file)
