@@ -18,6 +18,7 @@ All final and some intermediate results are included in the repository to facili
 ### Data sets
 - **cDNA_vRNA**: sensitivity of cDNA vs direct vRNA probing ([raw (cDNA, vRNA)](data/raw/2023.11.16_PR8_1MOI_6hpi_cDNA_vRNA_PB1), [raw (cDNA*)](data/raw/2023.11.10_PR8_1MOI_6hpi_cDNA_PB1), [spacetx](data/spacetx/cDNA_vRNA))
 - **specificity**: specificity of PLPs with closely related strains PR8 and StPt ([raw](data/raw/2023.11.10_PR8_StPt_1MOI_6hpi_HA_Specificity_experiment))
+- **plp_individual**: sensitivity of direct vRNA probing with 10 individual PLPs on the HA and NA segments ([raw HA](data/raw/2023.11.10_PR8_HA_1MOI_6hpi_PLPs1_10_separate), [raw NA](data/raw/2023.11.10_PR8_NA_1MOI_6hpi_PLPs1_10_separate), [spacetx](data/spacetx/plp_individual))
 
 ## Computational environments
 
