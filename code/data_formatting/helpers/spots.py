@@ -106,7 +106,7 @@ class PrimaryTileFetcher(TileFetcher):
         match = re.search(r"/.*Region (\d+).*_s(\d+)_ch...tif", filename)
         tile = match.group(2)
         tile_id = int(tile)
-        filename = self.fovs[fov_id]
+        filename = filename.replace("1Inc",f"{round_label+1}Inc")
         filename = filename.replace("_ch02", f"_ch0{ch_label+self.channel_offset}")
         metadata = metadata_from_xml(metadata_filename(filename))
         extras = {"original_path": filename}
@@ -122,11 +122,11 @@ class AuxTileFetcher(TileFetcher):
 
     def get_tile(
             self, fov_id: int, round_label: int, ch_label: int, zplane_label: int) -> FetchedTile:
-        filename = self.fovs[fov_id].replace("1Inc",f"{round_label+1}Inc")
+        filename = self.fovs[fov_id]
         match = re.search(r"/.*Region (\d+).*_s(\d+)_ch...tif", filename)
         tile = match.group(2)
         tile_id = int(tile)
-        filename = self.fovs[fov_id]
+        filename = filename.replace("1Inc",f"{round_label+1}Inc")
         metadata = metadata_from_xml(metadata_filename(filename))
         extras = {"original_path": filename}
         return ISSITile(filename, tile_id, metadata, extras)
@@ -146,6 +146,26 @@ primary_image_dimensions_4channel: Mapping[Union[str, Axes], int] = {
     Axes.ZPLANE: 1,
 }
 
+def get_primary_image_dimensions(rounds: int) -> Mapping[Union[str, Axes], int]:
+    return {
+        Axes.ROUND: rounds,
+        Axes.CH: 4,
+        Axes.ZPLANE: 1,
+    }
+
+def get_aux_images_dimensions(rounds: int) -> Mapping[str, Mapping[Union[str, Axes], int]]:
+    return {
+        "nuclei": {
+            Axes.ROUND: rounds,
+            Axes.CH: 1,
+            Axes.ZPLANE: 1,
+        },
+        "brightfield": {
+            Axes.ROUND: rounds,
+            Axes.CH: 1,
+            Axes.ZPLANE: 1,
+        },
+    }
 
 aux_images_dimensions: Mapping[str, Mapping[Union[str, Axes], int]] = {
     "nuclei": {
