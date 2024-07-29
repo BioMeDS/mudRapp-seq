@@ -9,9 +9,9 @@ from helpers.spots import PrimaryTileFetcher, AuxTileFetcher, primary_image_dime
 from helpers.spots_old import PrimaryTileFetcherOld, AuxTileFetcherOld
 
 for dir in [
-    "2022.02.23_PR8_1MOI_HA_NA_PB1_DiffPLP_newFormat/HA",
-    "2022.02.23_PR8_1MOI_HA_NA_PB1_DiffPLP_newFormat/PB1",
-    "2022.02.23_PR8_1MOI_HA_NA_PB1_DiffPLP_newFormat/NA",
+    "2022.02.23_PR8_1MOI_HA_NA_PB1_DiffPLP/HA",
+    "2022.02.23_PR8_1MOI_HA_NA_PB1_DiffPLP/PB1",
+    "2022.02.23_PR8_1MOI_HA_NA_PB1_DiffPLP/NA",
     ]:
     for i in tqdm([str(x)+" PLP" for x in [1,2,3,4,5,6,8,10]] + ["NegCtrl 10 PLP"]):
         plp = i.split(" ")[0] + "PLP"

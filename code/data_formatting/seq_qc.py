@@ -7,7 +7,7 @@ from starfish.experiment.builder import write_experiment_json
 from starfish.types import Axes
 from helpers.spots import PrimaryTileFetcher, AuxTileFetcher, get_primary_image_dimensions, get_aux_images_dimensions
 
-for dir in tqdm([f"2023_09_15_ATGC_test/{x}" for x in ["A_PB2", "C_PB1", "G_PA", "T_HA"]]):
+for dir in tqdm([f"2023.09.15_ATGC_test/{x}" for x in ["A_PB2", "C_PB1", "G_PA", "T_HA"]]):
     _, sample = dir.split("/")
     outputdir = f"data/spacetx/seq_qc/rep0/{sample}"
     os.makedirs(outputdir, exist_ok=True)
