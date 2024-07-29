@@ -19,7 +19,8 @@ def metadata_from_xml(fname):
 
 
 def get_position_from_metadata(metadata, tile, axis):
-	"""Parse the imagej metadata to get X, Y or Z location for the tile
+	"""Parse the xml metadata to get X, Y or Z location for the tile
+    Returns 0 if the axis is not found in the metadata (expected for Z in old metadata files)
 
 	Parameters
 	----------
@@ -28,8 +29,10 @@ def get_position_from_metadata(metadata, tile, axis):
 	tile : int
 		The tile number
 	axis : str
-		The axis to get the position for, either 'X' or 'Y'
+		The axis to get the position for
 	"""
+	if f"Pos{axis}" not in metadata['locations'][tile]:
+		return 0
 	return float(metadata['locations'][tile][f"Pos{axis}"])
 
 
