@@ -13,6 +13,8 @@ This repository contains the code that accompanies the paper introducing
 Raw data is archived independently in the [BioImage Archive (BIA)](https://www.ebi.ac.uk/bioimage-archive/) with accession number **TODO**.
 In order to reproduce our analyses, download the raw data from BIA and put them into the `data/raw` folder.
 
+Image data, acquired on the Leica DMI8 were maximum intensity projected along the z-axis and [instant computational clearing (ICC)](https://www.leica-microsystems.com/science-lab/life-science/an-introduction-to-computational-clearing/) was applied using Leica software. These images, with associated metadata consist the raw data of our analysis. Only for one dataset (2nt), the images without ICC were used for cell segmentation. Except for these non-ICC images, all datasets were convertet to [spacetx format](https://spacetx-starfish.readthedocs.io/en/latest/help_and_reference/spacetx-format/SpaceTxFormat/index.html) for further analysis.
+
 All final and some intermediate results are included in the repository to facilitate additional analyses without having to re-process all files from scratch.
 
 ### Data sets
