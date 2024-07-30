@@ -58,6 +58,16 @@ In order to create the formatted data in `data/spacetx` run these steps in the r
 ```bash
 mamba run -n mudRapp-seq-starfish python code/data_formatting/cDNA_vRNA.py
 mamba run -n mudRapp-seq-starfish python code/data_formatting/specificity.py
+mamba run -n mudRapp-seq-starfish python code/data_formatting/plp_individual.py
+mamba run -n mudRapp-seq-starfish python code/data_formatting/plp_cumulative.py
+mamba run -n mudRapp-seq-starfish python code/data_formatting/seq_qc.py
+mamba run -n mudRapp-seq-starfish python code/data_formatting/seq_2nt.py
+```
+
+For cell segmentation in the seq_2nt dataset, the intensity of raw images without ICC need to be re-scaled, such that the autofluorescence within the cell is amplified:
+
+```bash
+mamba run -n mudRapp-seq-starfish python code/data_formatting/seq_2nt.py
 ```
 
 ### Segmentation
