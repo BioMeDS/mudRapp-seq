@@ -9,16 +9,16 @@ from .spots import metadata_from_xml, metadata_filename, ISSITile
 def get_fovs(input_dir: str, rep: int, moi: float, hpi: str, channel: int) -> list:
 	fovs = []
 	if rep == 0:
-		pattern = os.path.join(input_dir, f"1Inc/{hpi}hpi/1Inc_*MOI_{hpi}hpi_PR8_TileScan 1_ICC_Processed001_s*_ch0{channel}.tif")
+		pattern = os.path.join(input_dir, f"1Inc/{hpi}hpi/1Inc_*MOI_{hpi}hpi_PR8_TileScan 1_*Processed001_s*_ch0{channel}.tif")
 		fovs = sorted(glob(pattern), reverse=True)
 
-		if hpi == "6" and moi == 0.3:
-			glob1 = os.path.join(input_dir, f"1Inc/{hpi}hpi/1Inc_*MOI_{hpi}hpi_PR8_TileScan 1_ICC_Processed001_s*_ch0{channel}.tif")
-			glob2 = os.path.join(input_dir, f"1Inc/{hpi}hpi/1Inc_*MOI_{hpi}hpi_PR8_TileScan 2_ICC_Processed001_s*_ch0{channel}.tif")
+		if hpi == 6 and moi == 0.3:
+			glob1 = os.path.join(input_dir, f"1Inc/{hpi}hpi/1Inc_*MOI_{hpi}hpi_PR8_TileScan 1_*Processed001_s*_ch0{channel}.tif")
+			glob2 = os.path.join(input_dir, f"1Inc/{hpi}hpi/1Inc_*MOI_{hpi}hpi_PR8_TileScan 2_*Processed001_s*_ch0{channel}.tif")
 			fovs = sorted(glob(glob2), reverse=True) + sorted(glob(glob1), reverse=True)[1:]
 		
 	else:
-		fovs = sorted(glob(os.path.join(input_dir, f"1Inc/{hpi}hpi/1Inc_PR8_*MOI_{hpi}hpi_2nt_mRNA_vRNA*_ICC_Processed001_s*_ch0{channel}.tif")))
+		fovs = sorted(glob(os.path.join(input_dir, f"1Inc/{hpi}hpi/1Inc_PR8_*MOI_{hpi}hpi_2nt_mRNA_vRNA*_Processed001_s*_ch0{channel}.tif")))
 	return fovs
 
 class PrimaryTileFetcher(TileFetcher):
