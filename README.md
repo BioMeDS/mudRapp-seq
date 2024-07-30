@@ -83,22 +83,40 @@ For cell instance segmentation, two different approaches were used:
 1. Watershed of the dapi image with nuclei as seeds
 2. A separate cellpose model with manual correction (details below)
 
+#### Strategy 1 (nuclei via cellpose, cells via watershed)
+
 The first strategy was used for most data, as it was deemed sufficient for filtering of infected cells and to calculate summary statistics like spots per cell.
 However, for single cell analyses the cell borders were not reliable enough.
-
-The separate cellpose model was trained on raw images without ICC (computational clearing by the microscope vendor).
-Further, data was preprocessed with intensity scaling and combination of dapi and X channel in a single rgb image (see code in file X) **TODO @Joél - done**.
-In order to maximize the number of correctly detected cells, the following parameters were used: `cell_proba=X`, `flow_threshold=X` and the resulting masks were post-processed, removing small objects and closing small holes and gaps (see code in file X) **TODO @Joél -done**.
-Masks produced this way were manually corrected using label editing tools in `napari`.
-Manual correction involved extending cells, shrinking cells, moving cell borders and adding new cells (starting with cell IDs of X) **TODO @Joél**.
-
-#### Strategy 1 (nuclei via cellpose, cells via watershed)
 
 This code performs nuclei segmentation with the cellpose model and watershed for cell segmentation (strategy 1).
 
 ```bash
 mamba run -n mudRapp-seq-cellpose python code/segmentation/cellpose_nuclei_watershed_cells.py
 ```
+
+#### Strategy 2 (nuclei and cells via cellpose, cells manually corrected)
+
+The separate cellpose model was trained on raw images without ICC (computational clearing by the microscope vendor).
+Further, data was preprocessed with intensity scaling (see [code](code/data_formatting/seq_2nt_scale_intensity.py)).
+In order to maximize the number of correctly detected cells, the following parameters were used: `cellprob_threshold=-4.0`, `flow_threshold=0.7` based on preliminary experiments.
+Resulting masks were post-processed, removing small objects and closing small holes and gaps (see [code](code/segmentation/cellpose_cells.py)).
+
+```bash
+mamba run -n mudRapp-seq-cellpose python code/segmentation/cellpose_nuclei.py
+mamba run -n mudRapp-seq-cellpose python code/segmentation/cellpose_cells.py
+```
+
+Masks produced this way were manually corrected using label editing tools in `napari`.
+Manual correction involved extending cells, shrinking cells, moving cell borders and adding new cells (new cells were assigned IDs of 2000 and higher).
+
+The script used for manual correction can be started for a specific replication, MOI, hpi, and fov like this:
+
+```bash
+mamba run -n mudRapp-seq-starfish python code/segmentation/manual_correction_via_napari.py --rep 1 --moi 0.3MOI --hpi 7 --fov_index 1
+```
+
+The "cells (manually corrected)" layer, can be modified using `napari` tools.
+When finished, the layer can be saved in the corresponding folder (e.g. `analysis/segmentation/seq_2nt/rep1/0.3MOI/7hpi/fov_1_cpmc_cells.png`), the infix `_cpmc_` stands for cellpose with manual correction.
 
 ### Spot detection
 
