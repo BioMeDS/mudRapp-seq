@@ -123,7 +123,8 @@ When finished, the layer can be saved in the corresponding folder (e.g. `analysi
 Spot detection is performed using starfish methods. The following command creates csv and netCDF files in `analysis/spot_detection`
 
 ```bash
-mamba run -n mudRapp-seq-starfish python code/spot_detection/spot_detection.py
+mamba run -n mudRapp-seq-starfish python code/spot_detection/cDNA_vRNA.py
+mamba run -n mudRapp-seq-starfish python code/spot_detection/plp_individual.py
 ```
 
 This creates separate spots files for each fov, they can be combined to a single `tsv.xz` file for each experiment using

@@ -2,7 +2,6 @@ import os
 import numpy as np
 import skimage.io
 import scipy.ndimage as ndi
-from starfish import Experiment
 import starfish.image
 from starfish.types import Levels
 from starfish.spots import FindSpots
@@ -57,13 +56,3 @@ def spot_detection_segmentation(exp, outdir):
 		feature_df.to_csv(f"{prefix}_spots.csv", na_rep=None, index=False)
 		clipped_both_scaled.xarray.to_netcdf(f"{prefix}_primary.nc")
 
-for rep in ["rep1", "rep2"]:
-	for molecule in ["cDNA", "cDNA_RCAprimer", "vRNA"]:
-		for plp in [str(x)+"PLP" for x in [1,5,10,"NegCtrl"]]:
-			exp_file = os.path.join(f"data/spacetx/cDNA_vRNA/{rep}/{molecule}/{plp}", "experiment.json")
-			if not os.path.isfile(exp_file):
-				print(f"Skipping {exp_file}")
-				continue
-			exp = Experiment.from_json(exp_file)
-			dir = f"analysis/spot_detection/cDNA_vRNA/{rep}/{molecule}/{plp}"
-			spot_detection_segmentation(exp, dir)
