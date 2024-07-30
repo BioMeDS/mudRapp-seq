@@ -3,7 +3,7 @@ src/starfish
 
 # Large analysis results
 analysis/segmentation
-analysis/spot_detection/cDNA_vRNA/rep*
+analysis/spot_detection/*/rep*
 
 # Raw data
 data/
