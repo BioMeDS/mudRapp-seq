@@ -1,6 +1,5 @@
 import os
 from starfish import Experiment
-from tqdm import tqdm
 from helpers.single_channel_spots import spot_detection_segmentation
 
 for rep in ["rep1", "rep2"]:
