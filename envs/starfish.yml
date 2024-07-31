@@ -4,4 +4,4 @@ dependencies:
    - napari=0.4.17
    - pip
    - pip:
-     - "git+https://github.com/BioMeDS/starfish.git@947472f79ca5206bc9075c7bb45bb28425b3f105#egg=starfish"
+     - "git+https://github.com/BioMeDS/starfish.git@2e8323b7647de57120614c6b89e9e69d4f5922f3#egg=starfish"
