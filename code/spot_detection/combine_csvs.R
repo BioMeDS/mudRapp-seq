@@ -1,20 +1,49 @@
 library(tidyverse)
 
-spot_files <- dir("analysis/spot_detection/cDNA_vRNA/", "*_spots.csv", full.names = TRUE, recursive = TRUE)
-names(spot_files) <- spot_files
-spots <- spot_files %>% map_df(read_csv, col_types = cols(), .id = "file")
+spots_from_path <- function(path, components) {
+  spot_files <- dir(path, "*_spots.csv", full.names = TRUE, recursive = TRUE)
+  names(spot_files) <- spot_files
+  spots <- spot_files %>% map_df(read_csv, col_types = cols(), na = "", .id = "file")
+  spots <- spots %>%
+    mutate(
+      file = str_remove(file, str_c(path, "/")),
+      file = str_remove(file, "_spots.csv"),
+    ) %>%
+    separate(file, components, sep = "/") %>%
+    group_by(across(all_of(components))) %>%
+    mutate(n_cells = n_distinct(cell)) %>%
+    ungroup()
+  return(spots)
+}
 
-spots <- spots %>%
-        mutate(
-                file = str_remove(file, "analysis/spot_detection/cDNA_vRNA//"),
-                file = str_remove(file, "_spots.csv"),
-        ) %>%
-        separate(file, c("rep", "molecule", "sample", "fov"), sep = "/")
+write_with_status <- function(df, path) {
+  outfile <- str_c(path, "all_spots.tsv.xz")
+  write_tsv(df, outfile)
+  message(str_c("Wrote ", nrow(df), " spots to file: ", outfile))
+}
 
-spots <- spots %>%
-        group_by(rep, molecule, sample, fov) %>%
-        mutate(n_cells = n_distinct(cell))
+# cDNA_vRNA
+path <- "analysis/spot_detection/cDNA_vRNA/"
+spots <- spots_from_path(path, c("rep", "molecule", "sample", "fov"))
+write_with_status(spots, path)
 
-outfile <- "analysis/spot_detection/cDNA_vRNA/all_spots.tsv.xz"
-write_tsv(spots, outfile)
-print(str_c("Successfully written ", nrow(spots), " spots to ", outfile))
+# plp_individual
+path <- "analysis/spot_detection/plp_individual/"
+spots <- spots_from_path(path, c("rep", "segment", "sample", "fov"))
+write_with_status(spots, path)
+
+# plp_cumulative
+path <- "analysis/spot_detection/plp_cumulative/"
+spots <- spots_from_path(path, c("rep", "segment", "sample", "fov"))
+write_with_status(spots, path)
+
+# specificity
+path <- "analysis/spot_detection/specificity/"
+spots <- spots_from_path(path, c("rep", "sample", "fov"))
+write_with_status(spots, path)
+
+# seq_2nt
+path <- "analysis/spot_detection/seq_2nt/"
+spots <- spots_from_path(path, c("rep", "moi", "hpi", "fov")) %>%
+  mutate(across(c(rep, moi, hpi, fov), parse_number))
+write_with_status(spots, path)
