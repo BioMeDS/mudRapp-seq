@@ -124,7 +124,10 @@ Spot detection is performed using starfish methods. The following command create
 
 ```bash
 mamba run -n mudRapp-seq-starfish python code/spot_detection/cDNA_vRNA.py
+mamba run -n mudRapp-seq-starfish python code/spot_detection/specificity.py
 mamba run -n mudRapp-seq-starfish python code/spot_detection/plp_individual.py
+mamba run -n mudRapp-seq-starfish python code/spot_detection/plp_cumulative.py
+mamba run -n mudRapp-seq-starfish python code/spot_detection/seq_2nt.py
 ```
 
 This creates separate spots files for each fov, they can be combined to a single `tsv.xz` file for each experiment using
@@ -135,6 +138,10 @@ Rscript code/spot_detection/combine_csvs.R
 
 The result of this step is included in the repository:
 - `analysis/spot_detection/cDNA_vRNA/all_spots.tsv.xz`
+- `analysis/spot_detection/plp_cumulative/all_spots.tsv.xz`
+- `analysis/spot_detection/plp_individual/all_spots.tsv.xz`
+- `analysis/spot_detection/seq_2nt/all_spots.tsv.xz`
+- `analysis/spot_detection/specificity/all_spots.tsv.xz`
 
 ### Spot analysis
 
