@@ -67,7 +67,7 @@ mamba run -n mudRapp-seq-starfish python code/data_formatting/seq_2nt.py
 For cell segmentation in the seq_2nt dataset, the intensity of raw images without ICC need to be re-scaled, such that the autofluorescence within the cell is amplified:
 
 ```bash
-mamba run -n mudRapp-seq-starfish python code/data_formatting/seq_2nt.py
+mamba run -n mudRapp-seq-starfish python code/data_formatting/seq_2nt_scale_intensity.py
 ```
 
 ### Segmentation
