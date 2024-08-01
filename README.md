@@ -108,6 +108,7 @@ mamba run -n mudRapp-seq-cellpose python code/segmentation/cellpose_cells.py
 
 Masks produced this way were manually corrected using label editing tools in `napari`.
 Manual correction involved extending cells, shrinking cells, moving cell borders and adding new cells (new cells were assigned IDs of 2000 and higher).
+The focus of the manual correction was mainly on infected cells, if no visibly infected cells were made out during inspection the FOV was saved via napari as a tiffile.
 
 The script used for manual correction can be started for a specific replication, MOI, hpi, and fov like this:
 
