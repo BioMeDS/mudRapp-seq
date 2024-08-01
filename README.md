@@ -154,6 +154,16 @@ These figures are included in the manuscript as Supp. Fig. 1b and Fig. 1c, respe
 ![Supplementary Figure 1b](figures/supp-fig1b-cDNA_vRNA-spot_counts-neg_ctrl.svg)
 ![Figure 1c](figures/fig1c-cDNA_vRNA-spot_counts.svg)
 
+#### Specificity of padlock probing on closely related strains
+
+The main result is that padlock probing has very high specificity.
+There are almost no false positive results of probes designed for another strain.
+For details, see the [analysis notebook](code/spot_analysis/specificity.ipynb).
+These figures are included in the manuscript as Supp. Fig. 1b and Fig. 1c, respectively.
+
+![Supplementary Figure 1b](figures/supp-fig1d-specificity-spot_counts-neg_ctrl.svg)
+![Figure 1c](figures/fig1e-specificity-spot_counts.svg)
+
 ### Segment analysis
 
 **TODO** describe TemporalCorrelation_mRNA_vRNA
