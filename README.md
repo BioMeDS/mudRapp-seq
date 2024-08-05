@@ -165,6 +165,17 @@ These figures are included in the manuscript as Supp. Fig. 1b and Fig. 1c, respe
 ![Supplementary Figure 1b](figures/supp-fig1d-specificity-spot_counts-neg_ctrl.svg)
 ![Figure 1c](figures/fig1e-specificity-spot_counts.svg)
 
+### Sensitivity of individual padlock probes
+
+To test the sensitivity of individual padlock probes (PLPs), PLPs for ten distinct locations on NA and HA each, have been designed.
+The main result is that individual PLPs have different levels of sensitivity.
+While most PLPs produce a good number of spots, some PLPs produce almost none.
+For details, see the [analysis notebook](code/spot_analysis/specificity.ipynb).
+These figures are included in the manuscript as Fig. 2c,d and Supp. Fig. 2c,d, respectively.
+
+![Figure 2c,d](figures/fig2cd-plp_individual-spot_counts_NA.svg)
+![Supplementary Figure 2c,d](figures/supp-fig2cd-plp_individual-spot_counts_HA.svg)
+
 ### Segment analysis
 
 **TODO** describe TemporalCorrelation_mRNA_vRNA
