@@ -1,9 +1,11 @@
 # mudRapp-seq
 
 This repository contains the code that accompanies the paper introducing 
-"*Multiple direct RNA-assisted padlock probing in combination with in-situ sequencing (mudRapp-seq)*":
+"*Multiple direct RNApadlock probing in combination with in-situ sequencing (mudRapp-seq)*":
 
-> Ahmad S, Schaust J, Ambil UB, Fischer SC, Ankenbrand MJ, Smyth RP. *Localization of influenza viral RNA in cells by direct RNA padlock probing and in-situ sequencing.* (in preparation)
+> Ahmad S, Gribling-Burrer AS, Schaust J, Fischer SC, Ambil UB, Ankenbrand MJ, Smyth RP.
+> *Visualizing the transcription and replication of influenza A viral RNAs in cells by multiple direct RNA padlock probing and in-situ sequencing (mudRapp-seq)*
+> (in preparation)
 
 > [!WARNING]
 > This repository is a work in progress, so if you notice any errors or have any suggestions, please open an [issue](https://github.com/BioMeDS/mudRapp-seq/issues).
