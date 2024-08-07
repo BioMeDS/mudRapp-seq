@@ -178,6 +178,18 @@ These figures are included in the manuscript as Fig. 2c,d and Supp. Fig. 2c,d, r
 ![Figure 2c,d](figures/fig2cd-plp_individual-spot_counts_NA.svg)
 ![Supplementary Figure 2c,d](figures/supp-fig2cd-plp_individual-spot_counts_HA.svg)
 
+#### Binding site reactivity with Nano-DMS-MaP
+
+To explain the different efficiencies of the individual PLPs, the reactivity of the binding sites was analyzed with Nano-DMS-MaP, both with and without PLPs bound.
+PLP binding reduces the reactivity of the binding sites (as expected).
+Further, the binding reactivity (without PLPs) positively correlates with PLP efficiency (both looking at the whole binding site, and only looking at a small window around the junctions).
+For details, see the [analysis notebook](code/binding_site_reactivities/plp_profiling.ipynb).
+An overview of the reactivities along the NA segment, and the correlations with efficiencies are shown in the manuscript in Fig. 3b,c and Supp. Fig. 3a.
+
+![Figure 3b](figures/fig3b-plp_reactivities-NA.svg)
+![Figure 3c](figures/fig3c-plp_reactivity_efficiency_correlation-NA.svg)
+![Supplementary Figure 3a](figures/supp-fig3a-plp_reactivity_efficiency_correlation-junction-NA.svg)
+
 ### Sensitivity with increasing number of padlock probes
 
 To test the sensitivity with increasing number of padlock probes per segment, an increasing number of the ten distinct locations on NA and HA, have been used.
