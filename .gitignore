@@ -6,7 +6,9 @@ analysis/segmentation
 analysis/spot_detection/*/rep*
 
 # Raw data
-data/
+data/*
+# allow data/nano-dms-map
+!data/nano-dms-map
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
