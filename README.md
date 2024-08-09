@@ -200,6 +200,21 @@ These figures are included in the manuscript as Fig. 2f,g and Supp. Fig. 2f,g, r
 ![Figure 2c,d](figures/fig2fg-plp_cumulative-spot_counts_NA.svg)
 ![Supplementary Figure 2c,d](figures/supp-fig2fg-plp_cumulative-spot_counts_HA.svg)
 
+### Sequencing quality control
+
+Dedicated experiments have been performed, to check the quality of the sequencing procedure.
+
+#### Channel bleed-through estimation
+
+Based on four experiments, in which only one of the channels (A,G,T, and C) is active in the first round, the bleed-through of signal from each channel to each other channel was estimated.
+
+Only a moderate bleed-through (factor 0.656) was detected from channel A to channel T.
+
+For details, see the notebooks ([analysis](code/seq_qc/channel_bleed_through_analysis.ipynb), [plot](code/seq_qc/channel_bleed_through_plot.ipynb)).
+This figure is included in the manuscript as Supp. Fig. 5b.
+
+![Supplementary Figure 5b](figures/supp-fig5b-bleed_through.svg)
+
 ### Segment analysis
 
 **TODO** describe TemporalCorrelation_mRNA_vRNA
