@@ -184,7 +184,7 @@ To explain the different efficiencies of the individual PLPs, the reactivity of 
 PLP binding reduces the reactivity of the binding sites (as expected).
 Further, the binding reactivity (without PLPs) positively correlates with PLP efficiency (both looking at the whole binding site, and only looking at a small window around the junctions).
 For details, see the [analysis notebook](code/binding_site_reactivities/plp_profiling.ipynb).
-An overview of the reactivities along the NA segment, and the correlations with efficiencies are shown in the manuscript in Fig. 3b,c and Supp. Fig. 3a.
+An overview of the reactivities along the NA segment, and the correlations with efficiencies are shown in the manuscript in Fig. 3b,c and Supp. Fig. 3a. The same plots were generated for the HA segment in the same notebook and shown in Supp. Fig. 4a,b,c.
 
 ![Figure 3b](figures/fig3b-plp_reactivities-NA.svg)
 ![Figure 3c](figures/fig3c-plp_reactivity_efficiency_correlation-NA.svg)
@@ -197,8 +197,8 @@ The main result is that sensitivity increases with number of PLPs used, but satu
 For details, see the [analysis notebook](code/spot_analysis/plp_cumulative.ipynb).
 These figures are included in the manuscript as Fig. 2f,g and Supp. Fig. 2f,g, respectively.
 
-![Figure 2c,d](figures/fig2fg-plp_cumulative-spot_counts_NA.svg)
-![Supplementary Figure 2c,d](figures/supp-fig2fg-plp_cumulative-spot_counts_HA.svg)
+![Figure 2f,g](figures/fig2fg-plp_cumulative-spot_counts_NA.svg)
+![Supplementary Figure 2f,g](figures/supp-fig2fg-plp_cumulative-spot_counts_HA.svg)
 
 ### Sequencing quality control
 
