@@ -217,4 +217,18 @@ This figure is included in the manuscript as Supp. Fig. 5b.
 
 ### Segment analysis
 
+#### Bulk analysis
+
+The molecule and segment counts, relative abundances and ambiguous spots were analysed by MOI and hpi, separately for nucleus and cytoplasm.
+
+For details, see the [analysis notebook](code/segment_analysis/seq_2nt_bulk.ipynb).
+These figures are included in the manuscript as Fig. 5c,d and Supp. Fig. 7a,b, and 9a,b respectively.
+
+![Figure 5c](figures/fig5c-molecule_abundance.svg)
+![Figure 5d](figures/fig5d-segment_abundance.svg)
+![Supplementary Figure 7a](figures/supp-fig7a-relative_abundance_1.0MOI.svg)
+![Supplementary Figure 7b](figures/supp-fig7b-relative_abundance_1.0MOI.svg)
+![Supplementary Figure 9a](figures/supp-fig9a-ambiguous_vs_unique_nucCyto.svg)
+![Supplementary Figure 9b](figures/supp-fig9b-spots_per_cell-cytoplasm-multi_spot.svg)
+
 **TODO** describe TemporalCorrelation_mRNA_vRNA
