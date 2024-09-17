@@ -130,6 +130,7 @@ mamba run -n mudRapp-seq-starfish python code/spot_detection/cDNA_vRNA.py
 mamba run -n mudRapp-seq-starfish python code/spot_detection/specificity.py
 mamba run -n mudRapp-seq-starfish python code/spot_detection/plp_individual.py
 mamba run -n mudRapp-seq-starfish python code/spot_detection/plp_cumulative.py
+mamba run -n mudRapp-seq-starfish python code/spot_detection/seq_qc.py
 mamba run -n mudRapp-seq-starfish python code/spot_detection/seq_2nt.py
 ```
 
@@ -145,6 +146,9 @@ The result of this step is included in the repository:
 - `analysis/spot_detection/plp_individual/all_spots.tsv.xz`
 - `analysis/spot_detection/seq_2nt/all_spots.tsv.xz`
 - `analysis/spot_detection/specificity/all_spots.tsv.xz`
+
+Summary results of the QC experiment are in:
+- `analysis/spot_detection/seq_qc/rep0/A_PB2/results.csv`
 
 ### Spot analysis
 
@@ -214,6 +218,10 @@ For details, see the notebooks ([analysis](code/seq_qc/channel_bleed_through_ana
 This figure is included in the manuscript as Supp. Fig. 5b.
 
 ![Supplementary Figure 5b](figures/supp-fig5b-bleed_through.svg)
+
+#### Decoding quality
+
+
 
 ### Segment analysis
 
