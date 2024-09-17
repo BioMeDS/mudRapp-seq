@@ -245,4 +245,12 @@ These figures are included in the manuscript as Fig. 5c,d and Supp. Fig. 7a,b, a
 ![Supplementary Figure 9a](figures/supp-fig9a-ambiguous_vs_unique_nucCyto.svg)
 ![Supplementary Figure 9b](figures/supp-fig9b-spots_per_cell-cytoplasm-multi_spot.svg)
 
-**TODO** describe TemporalCorrelation_mRNA_vRNA
+##### Temporal correlation
+
+The temporal correlation analysis of single segment mRNA expression with total vRNA abundance revealed a high correlation of the M segment.
+
+For details, see the [analysis notebook](code/segment_analysis/TemporalCorrelation_mRNA_vRNA.ipynb).
+This figure is included in the manuscript as Supp. Fig. 8.
+
+![Supplementary Figure 8](figures/supp-fig8-correlation_total_vRNA.svg)
+
