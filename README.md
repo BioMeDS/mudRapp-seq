@@ -221,7 +221,13 @@ This figure is included in the manuscript as Supp. Fig. 5b.
 
 #### Decoding quality
 
+Detailed analysis of the decoding correctness showed, that in an experiment with only a single valid 6nt barcode present, more than 92% of all detected spots were correct after 2 rounds of sequencing and 84% spots after 6 rounds of sequencing.
 
+For details, see [the analysis notebook](code/seq_qc/correctness_seq_qc_A.ipynb).
+These figures are included in the manuscript as Supp. Fig. 6b,c.
+
+![Supplementary Figure 6b](figures/supp-fig6b-factor_correct_by_round.svg)
+![Supplementary Figure 6c](figures/supp-fig6c-correct_by_round-detailed-box.svg)
 
 ### Segment analysis
 
