@@ -254,3 +254,21 @@ This figure is included in the manuscript as Supp. Fig. 8.
 
 ![Supplementary Figure 8](figures/supp-fig8-correlation_total_vRNA.svg)
 
+#### Single-cell analysis
+
+The single-cell analysis reveals extensive cell-to-cell heterogeneity.
+A substantial proportion of cells fails to replicate all vRNA segments.
+Cells missing either component of the polymerase complex vRNA segments or NP are associated with very low replication of the vRNA.
+
+For details, see the [analysis notebook](code/segment_analysis/seq_2nt_single_cell.ipynb).
+The results of the linear modelling are included in Table 2 in the manuscript.
+These figures are included in the manuscript as Fig. 6b,c,d,e and Supp. Fig. 10a,b, and 12a,b respectively.
+
+![Figure 6b](figures/fig6b-molecule_abundance.svg)
+![Figure 6c](figures/fig6c-segment-wise-mRNA-total-vRNA-boxplot.svg)
+![Figure 6d](figures/fig6d-total_vRNA_expression_by_missing_vRNA_segment.svg)
+![Figure 6e](figures/fig6e-total_mRNA_expression_by_missing_vRNA_segment.svg)
+![Supplementary Figure 10a](figures/supp-fig10a-vRNA_segment_abundance.svg)
+![Supplementary Figure 10b](figures/supp-fig10b-mRNA_segment_abundance.svg)
+![Supplementary Figure 12a](figures/supp-fig12a-distinct-vRNA-per-cell.svg)
+![Supplementary Figure 12b](figures/supp-fig12b-distinct-mRNA-per-cell.svg)
