@@ -229,7 +229,31 @@ These figures are included in the manuscript as Supp. Fig. 6b,c.
 ![Supplementary Figure 6b](figures/supp-fig6b-factor_correct_by_round.svg)
 ![Supplementary Figure 6c](figures/supp-fig6c-correct_by_round-detailed-box.svg)
 
-### Segment analysis
+### Segment analysis (seq_2nt)
+
+- channel order: "AGTC"
+- magnification: images were taken at 63x oil objective and pixel size is 0.103 µm
+
+#### 2nt barcode
+
+| Segment | vRNA/mRNA | Code |
+|-----|-----|-----|
+| PB2	| vRNA	| TT |
+| PB1	| vRNA	| TG |
+| PA	| vRNA	| TC |
+| HA	| vRNA	| TA |
+| NP	| vRNA	| GT |
+| NA	| vRNA	| GG |
+| M	| vRNA	| GC |
+| NS	| vRNA	| GA |
+| PB2	| mRNA	| CT |
+| PB1	| mRNA	| CG |
+| PA	| mRNA	| CC |
+| HA	| mRNA	| CA |
+| NP	| mRNA	| AT |
+| NA	| mRNA	| AG |
+| M	| mRNA	| AC |
+| NS	| mRNA	| AA |
 
 #### Bulk analysis
 
