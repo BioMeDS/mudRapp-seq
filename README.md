@@ -80,6 +80,11 @@ Images were separately segmented for nuclei and cell instances.
 Nuclei segmentation is used to separate spots based on their location into nucleus and cytoplasm.
 Cell segmentation is used to count spots per cell, filter infected cells and perform single cell analyses.
 
+All segmentation masks are depositet at Zenodo: 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13796669.svg)](https://doi.org/10.5281/zenodo.13796669)
+
+You can either download from there and unpack them into `analysis/segmentation` or follow the instructions below to create masks yourself.
+
 For nucleus segmentation, a cellpose model (`models/cellpose/nuclei`) was trained and applied to the raw dapi images (in spaceTx format).
 The model was trained on a total of X images with human provided sparse labels (list of images for training in file X) **TODO @Joél**.
 
