@@ -10,6 +10,8 @@ This repository contains the code that accompanies the paper introducing
 > [!WARNING]
 > This repository is a work in progress, so if you notice any errors or have any suggestions, please open an [issue](https://github.com/BioMeDS/mudRapp-seq/issues).
 
+This repository is archived at Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13284979.svg)](https://doi.org/10.5281/zenodo.13284979)
+
 ## Data
 
 Raw data is archived independently in the [BioImage Archive (BIA)](https://www.ebi.ac.uk/bioimage-archive/) with accession number **TODO**.
