@@ -86,7 +86,7 @@ All segmentation masks (along with training data and models) are depositet at Ze
 You can either download from there and unpack them into `analysis/segmentation` or follow the instructions below to create masks yourself.
 
 For nucleus segmentation, a cellpose model (`models/cellpose/nuclei`) was trained and applied to the raw dapi images (in spaceTx format).
-The model was trained on a total of X images with human provided sparse labels (list of images for training in file X) **TODO @Joél**.
+The model was trained on a total of 5 dapi images with human provided sparse labels (seq_2nt, rep3, hpi5, fov1-5).
 
 For cell instance segmentation, two different approaches were used:
 1. Watershed of the dapi image with nuclei as seeds
@@ -107,6 +107,7 @@ mamba run -n mudRapp-seq-cellpose python code/segmentation/cellpose_nuclei_water
 
 The separate cellpose model was trained on raw images without ICC (computational clearing by the microscope vendor).
 Further, data was preprocessed with intensity scaling (see [code](code/data_formatting/seq_2nt_scale_intensity.py)).
+The model was trained on a total of 7 images with human provided sparse labels (2nt_rep1_0.3MOI_5hpi_fov4, 2nt_rep1_0.3MOI_7hpi_fov1, 2nt_rep1_0.3MOI_8hpi_fov1, 2nt_rep1_0.3MOI_8hpi_fov4, 2nt_rep1_1.0MOI_7hpi_fov1, 2nt_rep1_1.0MOI_8hpi_fov1, 2nt_rep2_0.3MOI_8hpi_fov2).
 In order to maximize the number of correctly detected cells, the following parameters were used: `cellprob_threshold=-4.0`, `flow_threshold=0.7` based on preliminary experiments.
 Resulting masks were post-processed, removing small objects and closing small holes and gaps (see [code](code/segmentation/cellpose_cells.py)).
 
