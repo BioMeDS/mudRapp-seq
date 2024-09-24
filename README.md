@@ -80,8 +80,8 @@ Images were separately segmented for nuclei and cell instances.
 Nuclei segmentation is used to separate spots based on their location into nucleus and cytoplasm.
 Cell segmentation is used to count spots per cell, filter infected cells and perform single cell analyses.
 
-All segmentation masks are depositet at Zenodo: 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13796669.svg)](https://doi.org/10.5281/zenodo.13796669)
+All segmentation masks (along with training data and models) are depositet at Zenodo:
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13796668.svg)](https://doi.org/10.5281/zenodo.13796668)
 
 You can either download from there and unpack them into `analysis/segmentation` or follow the instructions below to create masks yourself.
 
