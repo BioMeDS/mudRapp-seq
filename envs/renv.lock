@@ -1270,6 +1270,19 @@
       ],
       "Hash": "99df65cfef20e525ed38c3d2577f7190"
     },
+    "ineq": {
+      "Package": "ineq",
+      "Version": "0.2-13",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "grDevices",
+        "graphics",
+        "stats"
+      ],
+      "Hash": "a637aa4075670fd2346fd469948202fa"
+    },
     "infer": {
       "Package": "infer",
       "Version": "1.0.7",

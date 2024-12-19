@@ -3,3 +3,4 @@
 # see https://github.com/rstudio/renv/issues/1930
 library(svglite)
 library(Hmisc)
+library(ineq)
